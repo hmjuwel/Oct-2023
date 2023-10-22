@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="widthdevice-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+   <div id="tx" style="width: 300px; height: 300px; border: 1px solid red"contenteditable="true"></div>
+      <div id="tst" style="width: 100px; height: 50px; border: 1px solid red"contenteditable="true"></div>
+   <script>
+   
+   let i = 0;
+   function writing() {
+     
+  //   console.log(i);
+     let txt = 'Good Night ... ';
+   //  for(let i = 0; i < txt.length; i++) {
+    for(i = 0; i <= 1000; i++) {
+      document.getElementById("tx").innerHTML += `${txt}</br>`;
+     
+     } 
+//   }
+i++;
+   }
+   
+  // setInterval(writing, 500);
+   writing();
+   let j = 0;
+   setInterval(() => {
+     if( j <= 5) {
+
+     document.getElementById("tst").innerHTML += `${j}.`;
+     }
+     j++
+   }, 1000);
+   </script>
+</body>
+</html>
