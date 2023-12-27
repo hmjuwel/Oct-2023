@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="widthdevice-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  
-</head>
-<body>
-   <div id="tx" style="width: 300px; height: 300px; border: 1px solid red"contenteditable="true"></div>
-      <div id="tst" style="width: 100px; height: 50px; border: 1px solid red"contenteditable="true"></div>
-   <script>
-   
-   let i = 0;
-   function writing() {
-     
-  //   console.log(i);
-     let txt = 'Good Night ... ';
-   //  for(let i = 0; i < txt.length; i++) {
-    for(i = 0; i <= 1000; i++) {
-      document.getElementById("tx").innerHTML += `${txt}</br>`;
-     
-     } 
-//   }
-i++;
-   }
-   
-  // setInterval(writing, 500);
-   writing();
-   let j = 0;
-   setInterval(() => {
-     if( j <= 5) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to our web page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#" id="home">home</a></li>
+        <li><a href="#" id="category">category</a></li>
+        <li><a href="#" id="blog">blog</a></li>
+        <li><a href="#" id="about">about</a></li>
+      </ul>
+    </header>
+    <div class="condownArea">
+      <div class="countdown">
+        <div class="yearArea">
+          <span id="year-num">12</span>
+          <span id="year-text">years</span>
+        </div>
+        <div class="monthArea">
+          <span id="month-num">12</span>
+          <span id="month-text">months</span>
+        </div>
+        <div class="dayArea">
+          <span id="day-num">12</span>
+          <span id="day-text">days</span>
+        </div>
+        <div class="hourArea">
+          <span id="hour-num">12</span>
+          <span id="hour-text">hours</span>
+        </div>
+        <div class="minuteArea">
+          <span id="minute-num">12</span>
+          <span id="minute-text">minutes</span>
+        </div>
+        <div class="secondArea">
+          <span id="second-num">12</span>
+          <span id="second-text">seconds</span>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="box">
+        <input type="text" id="textCopier" />
+        <div class="text-show"></div>
+        <div class="text-genaretor">
+          <div class="text-input">
+            <label class="input-item" for="text">Type your text.</label>
+            <input
+              class="input-item"
+              type="text"
+              name="text"
+              id="text"
+              value="Bangladesh"
+              autofocus
+              required
+            />
+            <label class="input-item" for="counter"
+              >How many times display the above text.</label
+            >
+            <input
+              class="input-item"
+              type="number"
+              name="counter"
+              id="counter"
+              value="1000"
+              min="1"
+              max="5000"
+              required
+            />
+          </div>
+          <div class="genarate-btn">
+            <input type="button" value="Generate" id="generate" />
+            <div class="generating">
+              <span>generating</span>
+              <span class="dot-one">.</span>
+              <span class="dot-two">.</span>
+              <span class="dot-three">.</span>
+            </div>
+          </div>
+        </div>
 
-     document.getElementById("tst").innerHTML += `${j}.`;
-     }
-     j++
-   }, 1000);
-   </script>
-</body>
+        <div class="hidden">
+          <input type="button" value="Copy" id="copy" />
+          <input type="button" value="Clear" id="Clear" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span class="fsr">
+        Copyright
+        <span id="yr"></span>
+        by HM Juwel.
+      </span>
+      <span class="fsr">All Rights Reserved.</span>
+    </footer>
+    <script src="javaScript/app.js"></script>
+  </body>
 </html>
