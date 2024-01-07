@@ -328,15 +328,15 @@ footer span {
     margin-top: 10px;
   }
   .countdown [class$="Area"] {
-    width: 30px;
+    width: 35px;
   }
   .countdown [id$="num"] {
-    height: 25px;
-    font-size: 25px;
+    height: 28px;
+    font-size: 28px;
   }
   .countdown [id$="text"] {
-    height: 10px;
-    font-size: 9px;
+    height: 11px;
+    font-size: 12px;
   }
   footer {
     height: 60px;
